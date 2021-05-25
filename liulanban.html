@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>静态留言板</title>
+
+</head>
+<body>
+  <table border="1">
+    <td>
+    <h2>留言板</h2>
+    <div id="demo">
+
+      <div id="b"></div>
+      <div id="comtent">
+        <img src="" alt="">
+        <p ></p>  <!--内容-->
+        <p></p>  <!--时间-->
+      </div><hr>
+
+        <input type="text" name="">
+        <button>发送</button>
+
+    </div>
+    <script type="text/javascript">
+      var content,c,time
+      var b =document.querySelector("#b")
+      var date = new Date().toUTCString()
+      var pc = 'file:///Users/chen/Downloads/file-earmark-person.svg'  //图片
+      document.querySelector("button").onclick=function(){
+        content = document.querySelector("input").value
+        if (content =="") {
+          alert("请输入内容")
+        }else{
+          c = '<div id="demo"><div id="comtent"><img src="http://picsum.photos/360/460?random=1" style="width: 35px;height: 40px"><p>'+content+'</p><p>'+date+'</p></div>' 
+        b.innerHTML += c
+        }
+
+      }
+    </script>
+    </td>
+  </table>
+</body>
+</html>
